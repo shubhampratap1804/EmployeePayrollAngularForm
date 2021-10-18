@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "EmployeePayrollApplication"
+    }
+  },
+  "defaultProject": "EmployeePayrollApplication",
+  "cli": {
+    "analytics": "914449a8-316e-412b-b704-6401661826de"
+  }
 }
