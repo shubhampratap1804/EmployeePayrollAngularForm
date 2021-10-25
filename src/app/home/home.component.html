@@ -49,26 +49,3 @@
     </tr>
 </table>
 <br>
-<!-- card to display searched data -->
-<div class="card text-center" *ngIf="searchData">
-    <h2>result found :</h2>
-    <div class="card-header">
-      Searched data
-    </div>
-    <div class="card-body">
-        <img src="./assets/girl1.png" *ngIf="getObj.profile==1" alt="">
-        <img src="./assets/girl2.png" *ngIf="getObj.profile==2" alt="">
-        <img src="./assets/boy1.png" *ngIf="getObj.profile==3" alt="">
-        <img src="./assets/boy2.png" *ngIf="getObj.profile==4" alt="">  
-      <h5 class="card-title">Name : {{getObj.name}}</h5>
-      <h5 class="card-title">Gender : {{getObj.gender}}</h5>
-      <h5 class="card-title">Salary : {{getObj.salary}}</h5>
-      <h5 class="card-title">StartDate : {{getObj.startDate}}</h5>
-      <h5 class="card-title">Department : {{getObj.department}}</h5>
-      
-      <button class="btn btn-success" (click)="edit(getObj.empId)">update</button> &nbsp;
-      <button class="btn btn-danger" (click)="remove(getObj.empId)">delete</button> 
-        
-    </div>
-    
-  </div>

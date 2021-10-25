@@ -44,27 +44,17 @@ public value:any;
       );
   }
 
-    /**
-   * sending data from html form to enrollEmployee service
-   */
      onsubmit(){
       console.log(this.data);
       this.sendData.enrollEmployee(this.data).subscribe(data=>console.log("successful"));
-      //this.nevigate.navigate(['home']);
+      this.nevigate.navigate(['home']);
     }
-  
-    /**
-     * sending data from html form to updateById service
-     */
+ 
     update(){
       this.sendData.updateById(this.data,this.getId).subscribe(data=>console.log("data update successful"));
       this.nevigate.navigate(['home']);
     }
-  
-    /**
-     * 
-     * @param value to assign department according to click
-     */
+
     getVal(value:string){
       this.data.department=value;
     }
