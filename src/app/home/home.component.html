@@ -4,14 +4,6 @@
         <div class="emp-detail-text">
             Employee Details <div class="emp-count">{{this.datas.length}}</div>
         </div>
-        <!-- <nav class="navbar navbar-light bg-light">
-            <div class="container-fluid">
-              <form class="d-flex position">
-                <input class="form-control me-2" #searchValue type="search" placeholder="Search empId" aria-label="Search">
-                <button class="btn btn-outline-success" (click)="sendSearchValue(searchValue)" >Search</button>
-              </form>
-            </div>
-          </nav> -->
           <a  class="add-button" [routerLink]="['/add','']">
             +Add User
         </a>
@@ -29,22 +21,22 @@
         <th>Start Date</th>
         <th>Actions</th>
     </tr>
-    <tr *ngFor='let data of datas'>
+    <tr *ngFor='let employee of employees'>
         <td>
-            <img src="./assets/girl1.png" *ngIf="data.profile==1" alt="">
-            <img src="./assets/girl2.png" *ngIf="data.profile==2" alt="">
-            <img src="./assets/boy1.png" *ngIf="data.profile==3" alt="">
-            <img src="./assets/boy2.png" *ngIf="data.profile==4" alt="">
+            <img src="./assets/girl1.png" *ngIf="employee.profile==1" alt="">
+            <img src="./assets/girl2.png" *ngIf="employee.profile==2" alt="">
+            <img src="./assets/boy1.png" *ngIf="employee.profile==3" alt="">
+            <img src="./assets/boy2.png" *ngIf="employee.profile==4" alt="">
             
         </td>
-        <td>{{data.name}}</td>
-        <td>{{data.gender}}</td>
-        <td>{{data.department}}</td>
-        <td>{{data.salary}}</td>
-        <td>{{data.startDate}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.gender}}</td>
+        <td>{{employee.department}}</td>
+        <td>{{employee.salary}}</td>
+        <td>{{employee.startDate}}</td>
         <td>
-           <a class="fevcon" (click)="edit(data.employeeId)" > <i class="fas fa-edit"></i></a>
-           <a class="fevcon" (click)="remove(data.employeeId)"> <i class="fas fa-trash-alt"></i></a>
+           <a class="fevcon" (click)="edit(employee.employeeId)" > <i class="fas fa-edit"></i></a>
+           <a class="fevcon" (click)="remove(employee.employeeId)"> <i class="fas fa-trash-alt"></i></a>
         </td>
     </tr>
 </table>

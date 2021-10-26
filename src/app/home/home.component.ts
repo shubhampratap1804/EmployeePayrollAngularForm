@@ -12,7 +12,7 @@ import { User } from '../user';
 
 export class HomeComponent implements OnInit {
 
-  public employeeData=[]
+  public employees=[]
   public update:number;
 
   constructor(private data:DataTransferService, private navigate:Router) { }
@@ -21,8 +21,8 @@ export class HomeComponent implements OnInit {
     this.data.getEmployees()
     .subscribe(
       (value:any) => {
-        this.employeeData = value.data;
-      console.log(this.employeeData);
+        this.employees= value.data;
+      console.log(this.employees);
       }
     );
 
